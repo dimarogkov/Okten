@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<title>Okten Web | Homework One | Dima Rogkov</title>
+    </head>
+    
+    <style>   
+        #text, button,input {cursor: pointer;}
+
+        #menuItem {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .xxx {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transition: all 0.3s !important;
+        }
+        .hide {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .main-block {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .blocks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+        }
+        .block {
+            width: 100%;
+            height: 200px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+        }
+        .block:first-child{background-color: red;}
+        .block:nth-child(2){background-color: salmon;}
+        .block:nth-child(3){background-color: blue;}
+        .block:nth-child(4){background-color: chartreuse;}
+        .block:last-child {background-color: cyan;}
+    </style>
+
+	<body>
+
+        <h1>Dima Rogkov</h1>
+        <h2>Task 1</h2>
+        <b>Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, 
+        чтобы при клике на кнопку исчезал элемент с id="text".</b>
+        <br><br>
+        <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt velit totam 
+        fugit deleniti provident voluptatum ipsa similique placeat mollitia tenetur qui, 
+        recusandae minus sint officiis eligendi exercitationem sequi ipsam facere.</div>
+        
+        <h2>Task 2</h2>
+        <b>Создайте кнопку, при клике на которую, она будет скрывать сама себя.</b>
+        <br><br>
+        <button id="btn">Click me</button>
+        <br><br>
+
+        <h2>Task 3</h2>
+        <b>створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+        При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+        та повідомити про це користувача</b>
+        <br><br>
+        <form name="formAge">
+            <input type="number" name="age" id="age" placeholder="Write your age">
+            <button type="submit" name="btn">Send</button>
+        </form>
+        <br><br>
+
+        <h2>Task 4</h2>
+        <b>Создайте меню, которое раскрывается/сворачивается при клике</b>
+        <br><br>
+        <nav>
+            <div id="menuTitle">Menu Title</div>
+            <nav id="menuItem">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </nav>
+
+        <h2>Task 5</h2>
+        <b>створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.</b>
+        <b>Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)</b>
+        <b>Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.</b>
+        <br><br>
+        <!-- <form name="form_one">
+            <input type="text" name="input_one">
+            <input type="text" name="input_two">
+        </form>
+        <form name="form_two">
+            <input type="text" name="input_tree">
+            <input type="text" name="input_foure">
+        </form>
+        <button id="formClick">Click</button> -->
+
+        <h2>Task 6</h2>
+        <b>Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+        <b>При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.</b>
+        <br><br>
+        <form name="form_take">
+            <input type="text" name="input_one">
+            <input type="text" name="input_two">
+            <input type="text" name="input_tree">
+        </form>
+        <button id="formClickTwo">Click</button>
+
+        <!-- <h2>Task 7</h2>
+        <b>Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.</b>
+        <br><br>
+        <div class="main-block">
+            <div class="blocks">
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                </div>
+        </div>
+        <button id="prev">Prev</button>
+        <button id="next">Next</button> -->
+
+        <h2>Task 8</h2>
+        <b>Сворити інпут текстового типу.</b>
+        <b>Якщо людина вводить слово і воно міститься в масиві не цензурних слів кинути алерт з попередженням.</b>
+        <b>Перевірку робити при натисканні на кнопку</b>
+        <br><br>
+        <input type="text" class="req">
+        <button id="btnReq">Send</button>
+
+
+        <h2>Task 9</h2>
+        <b>Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.</b>
+        <b>1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)</b>
+        <b>2й - оставляет старше 29 лет включительно</b>
+        <b>3й - оставляет тех у кого город киев</b>
+        <b>Данные выводить в документ</b>
+        <br><br>
+        <input type="checkbox" class="falseUser">Users False Status<br>
+        <input type="checkbox" class="oldUser">Old Users (29+)<br>
+        <input type="checkbox" class="towmUser">Users Who Live in Kiev<br>
+
+        <script src="script.js"></script>
+	</body>
+</html>

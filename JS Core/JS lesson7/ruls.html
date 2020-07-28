@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fight Club</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .wrap {
+                min-height: 100vh;
+                color: #ffffff;
+                position: relative;
+                padding: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            .wrap:nth-child(2){background-color: #2c3e50;}
+            .wrap:nth-child(3){background-color: #2d3436;}
+            .wrap:nth-child(4){background-color: #0a3d62;}
+            .wrap:nth-child(5){background-color: #2f3640;}
+            .wrap:nth-child(6){background-color: #636e72;}
+            .wrap:nth-child(7){background-color: #222f3e;}
+            .wrap:nth-child(8){background-color: #57606f;}
+            .wrap:nth-child(9){background-color: #34495e;}
+
+            .main {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 30%;
+                height: 100%;
+                box-shadow: 0 0 10px #666666;
+                z-index: 99;
+                background-color: #ffffff;
+                padding: 20px;
+            }
+            .main div {
+                margin-bottom: 30px;
+            }
+            .main a {text-decoration: none;color: black;text-transform: uppercase;font-size: 14px;transition: all 0.3s;}
+            .main a:hover{color: brown;}
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h1>Правила бойцовского клуба</h1>
+            <div class="wrap" id="rule1">
+                <div class="rules">
+                    <h2>Первое правило Бойцовского клуба.</h2>
+                    <p>Никому не рассказывать о Бойцовском клубе.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule2">
+                <div class="rules">
+                    <h2>Второе правило Бойцовского клуба.</h2>
+                    <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule3">
+                <div class="rules">
+                    <h2>Третье правило Бойцовского клуба.</h2>
+                    <p>В схватке участвуют только двое.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule4">
+                <div class="rules">
+                    <h2>Четвертое правило Бойцовского клуба.</h2>
+                    <p>Не более одного поединка за один раз.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule5">
+                <div class="rules">
+                    <h2>Пятое правило Бойцовского клуба.</h2>
+                    <p>Бойцы сражаются без обуви и голые по пояс.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule6">
+                <div class="rules">
+                    <h2>Шестое правило Бойцовского клуба.</h2>
+                    <p>Поединок продолжается столько, сколько потребуется.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule7">
+                <div class="rules">
+                    <h2>Седьмое правило Бойцовского клуба.</h2>
+                    <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
+                        окончен.</p>
+                </div>
+            </div>
+            <div class="wrap" id="rule8">
+                <div class="rules">
+                    <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
+                    <p>Новичок обязан принять бой.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="scriptForRules.js">
+
+        </script>
+    </body>
+</html>
