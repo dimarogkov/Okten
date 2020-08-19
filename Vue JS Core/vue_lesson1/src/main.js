@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Rogkov from './Rogkov.vue'
+import TodoList from './TodoList.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(Rogkov),
+  render: h => h(TodoList),
 }).$mount('#app')
