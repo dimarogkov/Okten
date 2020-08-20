@@ -57,17 +57,16 @@
         <h2>TodoList</h2>
         <div class="list__add">
           <input type="text" placeholder="Add New Task" v-model="list">
-          <button type="submite" @click="addList(list)">Add</button>
+          <button type="submite" @click="addList(list)" v-if="show">Add</button>
         </div>
       </div>
       <div class="list__items">
         <div class="list__item" v-for="(task, index) in tasks" :key="index">
-            <div v-if="add">
+            <div>
               <div class="list__header">Task for Today</div>
               <div class="list__body">{{task}}</div>
-              <button @click="add = !add">Delete</button>
+              <button @click="deleteAdd(index)">Delete</button>
             </div>
-            <div v-else></div>
         </div>
       </div>
     </div>
@@ -88,8 +87,12 @@ export default {
       hobby: '',
       comment: '',
       list: '',
-      tasks: [],
-      add: true
+      tasks: [
+        'Repair Car',
+        'Go for a walk',
+        'Run at the Morning'
+      ],
+      show: true
     }
   },
 
@@ -110,8 +113,16 @@ export default {
       }
     },
     addList() {
-      console.log(this.list)
-      this.tasks.push(this.list) 
+      this.tasks.push(this.list)
+      if (this.tasks.length >= 10) {
+        this.show = false
+      }
+    },
+    deleteAdd(index) {
+      this.tasks.splice(index,1)
+      if (this.tasks.length <= 10) {
+        this.show = true
+      }
     }
   }
 }
@@ -305,7 +316,6 @@ export default {
   .list__add {
     position: relative;
     display: inline-block;
-    border: 1px solid #333333;
   }
   .list__input input {
     width: 400px;
