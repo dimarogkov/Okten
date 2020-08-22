@@ -17,7 +17,7 @@ export default {
 
   methods: {
     add() {
-        this.$emit('addtask', this.addtask)
+      this.$emit('addtask', this.addtask)
     }
   }
 }
