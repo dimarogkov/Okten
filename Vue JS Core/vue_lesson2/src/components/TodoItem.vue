@@ -3,7 +3,7 @@
     <ul>
         <li>
             {{task}}
-            <button @click="remove(index)">Remove</button>
+            <button @click="remove">Remove</button>
         </li>
     </ul>
   </div>
@@ -18,6 +18,12 @@ export default {
       task: {
           Type: String,
           required: true
+      }
+  },
+  
+  methods: {
+      remove() {
+        this.$emit('remove', this.task)
       }
   }
 }

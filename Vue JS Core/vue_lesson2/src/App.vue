@@ -4,10 +4,11 @@
     <h3>Vue Js - Lesson Two</h3>
     <p>Create by Dima Rogkov</p>
     <hr>
-    <AddTodo/>
+    <AddTodo
+      @addtask = "addtask"
+    />
     <TodoList 
-      :tasks="tasks"
-      @add = "addtask" 
+      :tasks="tasks" 
     />
   </div>
 </template>
@@ -18,7 +19,7 @@ import AddTodo from "@/components/AddTodo";
 import TodoList from "@/components/TodoList";
 
 export default {
-  name: 'Todo',
+  name: 'App',
 
   components: {
     AddTodo,
@@ -33,8 +34,7 @@ export default {
 
   methods: {
     addtask(event) {
-      console.log(event)
-      // this.tasks.push(event);
+      this.tasks.push(event);
     }
   }
 }

@@ -4,6 +4,7 @@
     <div v-for="(task, index) in tasks" :key="index">
         <TodoItem
             :task="task"
+            @remove = "remove"
         />
     </div>
   </div>
@@ -20,6 +21,12 @@ export default {
       tasks: {
           type:Array,
           required: true
+      }
+  },
+
+  methods: {
+      remove(event){
+          this.tasks.splice(event, 1);
       }
   },
 
