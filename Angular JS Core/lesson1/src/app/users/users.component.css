@@ -1,0 +1,17 @@
+.block h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
+}
+.block_main {
+    display: inline-block;
+    position: relative;
+    width: 32%;
+}
+.block_item {
+    position: relative;
+    display: block;
+    margin: 0 15px 10px;
+    box-shadow: 0 2px 5px #666666;
+    padding: 20px;
+}
