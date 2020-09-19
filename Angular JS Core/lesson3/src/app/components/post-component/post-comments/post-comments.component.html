@@ -1,0 +1,10 @@
+<h1>Post Comments</h1>
+<button routerLink="/posts">BACK</button><br><br>
+<hr>
+<div *ngFor='let com of postComment'>
+    ID - {{com.id}} <br>
+    NAME - {{com.name}} <br>
+    EMAIL - {{com.email}} <br>
+    BODY - {{com.body}} <br><br>
+    <hr>
+</div>

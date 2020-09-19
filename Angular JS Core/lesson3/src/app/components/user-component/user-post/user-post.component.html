@@ -1,0 +1,10 @@
+<h1>User Posts</h1>
+<button routerLink="/users">BACK</button><br><br>
+<hr>
+
+<div *ngFor="let post of userPosts">
+    ID -{{post.id}} <br>
+    TITLE - {{post.title}} <br>
+    BODY - {{post.body}} <br><br>
+    <hr>
+</div>
