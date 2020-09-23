@@ -1,0 +1,10 @@
+<div>
+    ID - {{user.id}} <br>
+    NAME - {{user.name}} <br>
+    USERNAME - {{user.username}} <br>
+    EMAIL - {{user.email}} <br><br>
+    <button [routerLink]="['posts', user.id]" [state]='{user: user}'>Get Posts</button>
+    <button (click)="tree(user.id)">TREE</button>
+    <button [routerLink] = "['posts']" [queryParams]='{id: user.id}'>Get Posts</button>
+    <hr>
+</div>
