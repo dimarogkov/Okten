@@ -1,0 +1,19 @@
+<h1>SELECT WITH USERS ID</h1>
+<select (change)='getUser()' [(ngModel)]='userId'>
+    <option *ngFor="let user of users">{{user.id}}</option>
+</select>
+
+<br><br>
+
+<h3>Form with users info</h3>
+
+<form [formGroup]='userForma' (submit)='showUser()' *ngIf='user'>
+    <input type="text" formControlName='name'  placeholder="name" >
+    <br>
+    <p *ngIf="userForma.get('name').hasError('required')">Write name</p>
+
+    <input type="text" formControlName='surname'  placeholder="surname"><br>
+    <input type="email" formControlName='email'  placeholder="email"><br>
+    <input type="number" formControlName='id'  placeholder="id"><br>
+    <button type="submit" [disabled]='userForma.invalid'>Send</button>
+</form>
