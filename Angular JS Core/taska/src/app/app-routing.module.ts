@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from './components/user/user/user.component';
+import { AllUsersComponent } from './components/user/all-users/all-users.component';
 
 const routes: Routes = [
-  {path: '', component: UserComponent},
-  {path: ':id', loadChildren: () => import('./modules/post/post.module').then(m => m.PostModule)}
+  {path: '', component: AllUsersComponent}
 ];
 
 @NgModule({
