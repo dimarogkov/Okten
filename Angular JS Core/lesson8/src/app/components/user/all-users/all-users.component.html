@@ -5,15 +5,10 @@
 
 <br><br>
 
-<h3>Form with users info</h3>
-
 <form [formGroup]='userForma' (submit)='showUser()' *ngIf='user'>
-    <input type="text" formControlName='name'  placeholder="name" >
-    <br>
-    <p *ngIf="userForma.get('name').hasError('required')">Write name</p>
-
+    <h3>Form with users info</h3>
+    <input type="text" formControlName='name'  placeholder="name" ><br>
     <input type="text" formControlName='surname'  placeholder="surname"><br>
     <input type="email" formControlName='email'  placeholder="email"><br>
-    <input type="number" formControlName='id'  placeholder="id"><br>
     <button type="submit" [disabled]='userForma.invalid'>Send</button>
 </form>
