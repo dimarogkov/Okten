@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Services } from "../../services/services";
+import {PostServices} from '../../services/postServices'
 import Post from "../post/post";
 
 
 class PostList extends Component {
-    api = new Services();
+    api = new PostServices();
     state = {posts: []}
 
     async componentDidMount() {

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { Services } from "../../services/services";
 import User from "../user/user";
+import {UserServices} from '../../services/userService'
 
 class UserList extends Component {
-    api = new Services();
+    api = new UserServices();
     state = { users: [] }
 
     async componentDidMount() {

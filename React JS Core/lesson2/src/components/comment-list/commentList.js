@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Services } from "../../services/services";
+import {CommentServices} from '../../services/commentServices'
 import Comment from "../comment/comment";
 
 class CommentList extends Component {
-    api = new Services();
+    api = new CommentServices();
     state = {comments: []};
 
     async componentDidMount() {
