@@ -1,0 +1,29 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* RESET STYLES */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+*{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; -webkit-text-size-adjust:none;box-sizing:border-box;}
+.clear{clear:both; overflow:hidden; height:0px; font-size:0px; display: block;}
+html:not(.touch-screen)::-webkit-scrollbar,html:not(.touch-screen) *::-webkit-scrollbar{width:6px;height:6px;}
+html:not(.touch-screen)::-webkit-scrollbar-track,html:not(.touch-screen) *::-webkit-scrollbar-track{background:transparent  ;}
+html:not(.touch-screen)::-webkit-scrollbar-thumb,html:not(.touch-screen) *::-webkit-scrollbar-thumb{background: #000000;}
+:focus, :hover, :active, :visited {outline: none;}
+body *::selection {color:#fff;background:#FF7D00;}
+body {display: flex;justify-content: center;align-items: center;width: 100%;min-height: 100vh;background-image: linear-gradient(125deg, #ffffff, #bdc3c7);font-family: 'Lato', sans-serif;}
+.block {position: relative;display: inline-block;width: 30%;padding: 5%;border-radius: 10px;background-color: #ffffff;text-align: center;}
+.block h1 {font-size: 40px;letter-spacing: 1px;line-height: 1.2em;text-align: center;margin-bottom: 20px;}
+.block input {position: relative;display: block;width: 100%;padding: 10px;margin-bottom: 20px;color: #000000;font-size: 16px;letter-spacing: 1px;}
+.block input::placeholder {color: #7f8c8d;}
+.block input.btn {transition: all 0.3s;margin-bottom: 40px;cursor: pointer;background-color: #2980b9;color: #ffffff;text-transform: uppercase;letter-spacing: 1px;font-size: 14px;padding: 14px 10px;}
+.block input.btn:active {transform: translateY(3px);}
+.block a {text-decoration: none;color: #2980b9;letter-spacing: 1px;font-size: 18px;transition: all 0.3s;}
+.block a:hover {color: #c0392b;}
+.error {display: flex;justify-content: center;align-items: center;width: 100%;min-height: 97vh;background-image: linear-gradient(125deg, #ffffff, #bdc3c7);font-family: 'Lato', sans-serif;}
+.error h1 {font-size: 100px;color: #c0392b;font-weight: 700;letter-spacing: 2px;}
+.profile {display: block;width: 100%;min-height: 100vh;background-image: linear-gradient(125deg, #ffffff, #bdc3c7);font-family: 'Lato', sans-serif;}
+.profile h1 {width: 100%;padding: 20px 10px;color: #ffffff;font-weight: 700;font-size: 40px;letter-spacing: 2px;background-color: #2980b9;}
+.profile p {font-size: 26px;color: #000000;letter-spacing: 1px;margin: 20px 0;}
+.profile .btn {position: absolute;cursor: pointer;top: 20px;right: 20px;padding: 14px 30px;background-color: #c0392b;border-radius: 3px;color: #ffffff;letter-spacing: 1px;text-transform: uppercase;font-size: 14px;}
+.user-block {position: relative;display: flex;width: 100%;}
+.user-block div {width: 20%;margin-right: 3%;padding: 20px;background-color: #c0392b;border-radius: 10px;}
+.user-block div h3 {color: #ffffff;font-size: 20px;letter-spacing: 1px;margin-bottom: 10px;}
+.user-block div p {color: #ffffff;font-size: 16px;letter-spacing: 1px;}

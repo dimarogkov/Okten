@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Dima Rogkov |  Profile</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="profile">
+        <div class="profile-block">
+            <h1>Profile</h1>
+            {{#if userIsLogin}}
+                <p>Hello User</p>
+                <form method="get" action="/logout">
+                    <input type="submit" class="btn" value="Log Out">
+                </form> 
+                <div class="user-block">
+                    {{#each users}}
+                        <div>
+                            <h3>{{this.nickname}}</h3>
+                            <p>{{this.email}}</p>
+                        </div><hr>
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+    </body>
+</html>
