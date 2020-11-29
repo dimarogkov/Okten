@@ -36,11 +36,13 @@ app.get('/404', (req, res) => {
 // post require
 app.post('/registration', (req, res) => {
     const { nickname, email, password } = req.body;
-    const find = users.find((user) => (user.email === email || user.nickname === nickname));
-    if (find !== undefined) {
+    const find = users.find((user) => (user.email === email || user.nickname === nickname || email === '' || nickname === '' && password === ''));
+
+    if (find) {
         userIsLogin = false;
         return res.redirect('/404');
     }
+
     users.push({ nickname, email, password });
     userIsLogin = true;
     return res.redirect('/profile');
@@ -49,10 +51,12 @@ app.post('/registration', (req, res) => {
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
     const find = users.find((user) => (user.email === email && user.password === password));
-    if (find !== undefined) {
+
+    if (find) {
         userIsLogin = true;
         return res.redirect('/profile');
     }
+
     userIsLogin = false;
     return res.redirect('/');
 });
