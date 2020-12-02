@@ -1,4 +1,4 @@
-const { users } = require('../users/users');
+const { users } = require('../../users/users');
 
 module.exports = (req, res, next) => {
     try {
