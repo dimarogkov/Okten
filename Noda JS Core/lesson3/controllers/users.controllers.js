@@ -1,12 +1,11 @@
 const usersService = require('../services/users.services');
-let { users } = require('../users/users');
 
 module.exports = {
     createUser: (req, res) => {
         try {
             const users = usersService.createUser(req.body);
 
-            res.status(201).json(users);
+            res.json(users);
         } catch (error) {
             res.status(400).json(error.message);
         }
@@ -16,7 +15,7 @@ module.exports = {
         try {
             const getUsers = usersService.getUsers();
 
-            res.status(200).json(getUsers);
+            res.json(getUsers);
         } catch (error) {
             res.status(400).json(error.message);
         }
@@ -31,7 +30,7 @@ module.exports = {
                 throw new Error('User not find');
             }
 
-            res.status(200).json(findUserByNickname);
+            res.json(findUserByNickname);
         } catch (error) {
             res.status(400).json(error.message);
         }
@@ -42,7 +41,7 @@ module.exports = {
             const { nickname } = req.params;
             const deleteUserByNickname = userService.deleteUserByNickname(nickname);
 
-            res.status(200).json(deleteUserByNickname);
+            res.json(deleteUserByNickname);
         } catch (error) {
             res.status(400).json(error.message);
         }
