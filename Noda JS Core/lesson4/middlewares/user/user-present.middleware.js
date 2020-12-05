@@ -1,12 +1,9 @@
-const { users } = require('../../users/users');
-
 module.exports = (req, res, next) => {
     try {
-        const { nickname } = req.body;
-        const user = users.find((user) => (user.nickname === nickname));
-
-        if (!user) {
-            console.log('There is not user with this nickname');
+        const { userId } = req.body;
+        
+        if (userId < 1) {
+            throw new Error('There are not users with this ID');
         }
 
         next();

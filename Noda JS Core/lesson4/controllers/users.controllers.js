@@ -21,27 +21,27 @@ module.exports = {
         }
     },
 
-    findUserByNickname: async (req, res) => {
+    findUserById: async (req, res) => {
         try {
-            const { nickname } = req.params;
-            const findUserByNickname = await usersService.findUserByNickname(nickname);
+            const { userId } = req.params;
+            const findUserById = await usersService.findUserById(userId);
 
-            if (!findUserByNickname) {
+            if (!findUserById) {
                 throw new Error('User not find');
             }
 
-            res.json(findUserByNickname);
+            res.json(findUserById);
         } catch (error) {
             res.status(400).json(error.message);
         }
     },
 
-    deleteUserByNickname: async (req, res) => {
+    deleteUserById: async (req, res) => {
         try {
-            const { nickname } = req.params;
-            const deleteUserByNickname = await userService.deleteUserByNickname(nickname);
+            const { userId } = req.params;
+            const deleteUserById = await usersService.deleteUserById(userId);
 
-            res.json(deleteUserByNickname);
+            res.json(deleteUserById);
         } catch (error) {
             res.status(400).json(error.message);
         }

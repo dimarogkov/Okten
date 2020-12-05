@@ -13,11 +13,25 @@ module.exports = {
         return UserModel.create(user);
     },
 
-    findUserByNickname: (nickname) => {
+    findUserById: (userId) => {
         const UserModel = db.getModel('User');
+        const CarModel = db.getModel('Car');
 
-        return UserModel.create(nickname);
+        return CarModel.findAll({
+            where: {
+                id: userId
+            },
+            include: [{ model: UserModel, as: 'user' }]
+        });
     },
 
-    deleteUserByNickname: (nickname) =>  users.filter((user) => user.nickname !== nickname)
+    deleteUserById: (userId) => {
+        const UserModel = db.getModel('User');
+
+        return UserModel.destroy({
+            where: {
+                id: userId
+            }
+        });
+    },
 };

@@ -1,8 +1,8 @@
 module.exports = (req, res, next) => {
     try {
-        const user = req.body;
+        const {email, password} = req.body;
         
-        if (!user.email || !user.password) {
+        if (!email || !password) {
             throw new Error('User is not valid');
         }
 

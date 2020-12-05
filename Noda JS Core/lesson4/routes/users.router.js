@@ -6,9 +6,9 @@ const usersRouter = Router();
 
 usersRouter.post('/', usersMiddlewares.isUserValid, usersController.createUser);
 
-usersRouter.delete('/:nickname', usersMiddlewares.isUserNicknamePresent, usersController.deleteUserByNickname);
+usersRouter.delete('/:userId', usersMiddlewares.isUserIdPresent, usersController.deleteUserById);
 
-usersRouter.get('/:id', usersMiddlewares.isUserNicknamePresent, usersController.findUserByNickname);
-usersRouter.get('/', usersController.getUsers);
+usersRouter.get('/:userId', usersMiddlewares.isUserIdPresent, usersController.findUserById);
+usersRouter.get('/', usersMiddlewares.isUserIdPresent, usersController.getUsers);
 
 module.exports = usersRouter;
