@@ -9,6 +9,7 @@ module.exports = async (req, res, next) => {
             throw new Error('User is no found');
         }
         
+        req.user = user;
         next();
     } catch (error) {
         res.status(400).json(error.message);
