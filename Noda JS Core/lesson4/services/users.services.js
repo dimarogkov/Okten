@@ -3,6 +3,7 @@ const db = require('../db').getInstance();
 module.exports = {
     getUsers: () => {
         const UserModel = db.getModel('User');
+        console.log(UserModel);
 
         return UserModel.findAll();
     },

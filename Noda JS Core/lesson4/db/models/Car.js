@@ -27,7 +27,7 @@ module.exports = (client, DataTypes) => {
     );
 
     const User = require('./User')(client, DataTypes);
-    Car.belongsTo(User, { foreignKey: 'user_id', as: 'user' });
+    Car.belongsTo(User, { foreignKey: 'user_id', as: 'user', onUpdate: 'CASCADE', onDelete: 'CASCADE' });
     
     return Car;
 }
