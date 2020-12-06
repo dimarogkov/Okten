@@ -9,6 +9,6 @@ usersRouter.post('/', usersMiddlewares.isUserValid, usersController.createUser);
 usersRouter.delete('/:userId', usersMiddlewares.isUserIdPresent, usersController.deleteUserById);
 
 usersRouter.get('/:userId', usersMiddlewares.isUserIdPresent, usersController.findUserById);
-usersRouter.get('/', usersMiddlewares.isUserIdPresent, usersController.getUsers);
+usersRouter.get('/', usersController.getUsers);
 
 module.exports = usersRouter;

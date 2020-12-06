@@ -23,8 +23,8 @@ module.exports = {
 
     findUserById: async (req, res) => {
         try {
-            const { userId } = req.params;
-            const findUserById = await usersService.findUserById(userId);
+            const [{ user }] = req.user;
+            const findUserById = await usersService.findUserById(user.id);
 
             if (!findUserById) {
                 throw new Error('User not find');
@@ -38,8 +38,8 @@ module.exports = {
 
     deleteUserById: async (req, res) => {
         try {
-            const { userId } = req.params;
-            const deleteUserById = await usersService.deleteUserById(userId);
+            const [{ user }] = req.user;
+            const deleteUserById = await usersService.deleteUserById(user.id);
 
             res.json(deleteUserById);
         } catch (error) {
